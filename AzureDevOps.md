@@ -44,7 +44,7 @@ az repos create: Create a new repository in your project.
 
 az repos show: Show details about a specific repository.
 
-az repos clone: Clone a specific repository to your local machine.
+az repos clone: Clone a specific repository to your local machine or workspace.
 
 # Notes 
 
