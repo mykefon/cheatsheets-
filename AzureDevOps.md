@@ -46,10 +46,6 @@ az repos show: Show details about a specific repository.
 
 az repos clone: Clone a specific repository to your local machine or workspace.
 
-# Notes 
-
-These are just a few of the most commonly used Azure DevOps CLI commands.
-
 # Azure Boards command 
 
 az boards work-item create: Create a new work item in Azure Boards.
