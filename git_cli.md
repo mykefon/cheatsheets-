@@ -1,4 +1,4 @@
-git init: initializes a new Git repository
+## git init: initializes a new Git repository
 
 git clone [repository]: clones a remote repository to your local machine
 
@@ -26,7 +26,6 @@ git remote -v: lists all configured remote repositories
 
 git reset [filename]: removes a file from the staging area
 
-
 git reset --hard [commit]: resets the repository to the specified commit, discarding any changes made since then
 
 git diff: shows the differences between the working directory and the repository
@@ -37,6 +36,6 @@ git stash: temporarily saves changes that are not ready to be committed
 
 git cherry-pick [commit]: applies the changes from the specified commit to the current branch
 
-Note :
+## Note
 
 that this is not an exhaustive list, and there are many other Git commands and options available. However, these are some of the most commonly used commands that should be sufficient for most basic Git workflows.
