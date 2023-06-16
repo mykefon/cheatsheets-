@@ -6,6 +6,35 @@ aws configure: Configures your AWS credentials, including your access key and se
 
 aws sts get-caller-identity: Displays the IAM user or role that is currently authenticated.
 
+aws sts get-caller-identity --query Account --output text: This command retrieves your AWS account ID associated with the current AWS CLI configuration.
+
+aws sts assume-role --role-arn <role-arn> --role-session-name <session-name>: Use this command to assume an IAM role and obtain temporary security credentials. Replace <role-arn> with the ARN of the IAM role, and <session-name> with a name for the assumed role session.
+
+aws sts get-session-token --duration-seconds <duration-seconds>: This command generates temporary session credentials (access key, secret access key, and session token). Specify the desired duration of the session in <duration-seconds>.
+
+aws configure set mfa_serial <mfa-serial>: Use this command to enable MFA by specifying the MFA device ARN in <mfa-serial>.
+
+aws s3 ls --region <region-name>: This command overrides the default region specified in the AWS CLI configuration and sets the region for a specific command. Replace <region-name> with the desired AWS region.
+
+aws ec2 describe-regions --query 'Regions[].RegionName' --output text: This command lists all the available AWS regions that you can use in your commands.
+
+aws configure --profile <profile-name>: Use this command to create a new named profile in the AWS CLI configuration. Replace <profile-name> with the desired name for the profile.
+
+aws configure list: This command displays the current AWS CLI configuration, including the active profile, default region, and default output format.
+export AWS_PROFILE=<profile-name>: Use this command to set the AWS profile to use if you have multiple profiles configured in the AWS CLI. Replace <profile-name> with the name of the desired profile.
+
+aws configure set default.output <output-format>: Use this command to set the default output format for AWS CLI commands. Replace <output-format> with the desired format, such as "json", "text", "table", etc.
+
+aws sts assume-role --role-arn <role-arn> --role-session-name <session-name> --external-id <external-id>: This command assumes an IAM role and requires providing an external ID for additional security. Replace <role-arn> with the ARN of the IAM role, <session-name> with a name for the assumed role session, and <external-id> with the external ID associated with the role.
+
+aws <command> --profile <profile-name>: By appending --profile <profile-name> to an AWS CLI command, you can specify the AWS profile to use for that specific command. Replace <profile-name> with the desired AWS profile.
+
+export AWS_ACCESS_KEY_ID=<access-key>
+export AWS_SECRET_ACCESS_KEY=<secret-access-key>
+export AWS_SESSION_TOKEN=<session-token>:  Use these commands to set the environment variables for AWS CLI authentication. Replace <access-key>, <secret-access-key>, and <session-token> with the appropriate values.
+
+aws configure list-profiles: This command lists all the profiles configured in the AWS CLI.
+
 # EC2 Instances
 
 aws ec2 run-instances: Launches a new EC2 instance.
@@ -59,4 +88,4 @@ aws elasticbeanstalk describe-environments: Lists information about all Elastic 
 
 ## Note: 
 
-This is not an exhaustive list, and there are many other AWS CLI commands and options available. However, these are some of the most commonly used commands that should be sufficient for most basic AWS workflows.
+These are some of the most commonly used commands that should be sufficient for most basic AWS workflows.You can find more information and options for each command in the AWS CLI documentation: https://awscli.amazonaws.com/v2/documentation/api/latest/index.html
