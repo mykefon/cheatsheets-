@@ -90,6 +90,12 @@ apt search [keyword]: Search for a package
 nano [file]: Open a file in the Nano text editor
 
 vi [file]: Open a file in the Vim text editor
+- esc + i: in other to make changes to the file! 
+- esc + ":" :in other to exit the file 
+  • :wq or wq!: to write or save the file before            .        exiting
+  • q : exit with Saving 
+   
+- esc + DD: to delete a full line at ones 
 
 cat [file] | grep [pattern]: Search for a pattern in a file using piped commands
 
