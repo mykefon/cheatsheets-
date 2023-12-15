@@ -1,4 +1,6 @@
-## git init: initializes a new Git repository
+## Git Cli 
+
+git init: initializes a new Git repository
 
 git clone [repository]: clones a remote repository to your local machine
 
@@ -36,6 +38,10 @@ git stash: temporarily saves changes that are not ready to be committed
 
 git cherry-pick [commit]: applies the changes from the specified commit to the current branch
 
+git diff : display the difference between commits and changes 
+
 ## Note
 
 that this is not an exhaustive list, and there are many other Git commands and options available. However, these are some of the most commonly used commands that should be sufficient for most basic Git workflows.
+
+
