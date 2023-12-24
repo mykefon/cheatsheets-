@@ -100,7 +100,18 @@ Output Values:
  
  ## Initialize a new backend for remote state storage:
  
-  terraform init -backend-config=<config-file>
+ terraform init -backend-config=<config-file>
+ 
+## Working with workspaces
+terraform workspace new dev
+terraform workspace new stage
+terraform workspace new prod
+
+## To switch between workspaces
+terraform workspace select dev
+terraform workspace select stage
+terraform workspace select prod
+
  
  ## Notes:
  
