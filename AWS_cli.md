@@ -68,13 +68,31 @@ aws lambda invoke: Invokes a Lambda function.
 aws lambda list-functions: Lists all Lambda functions in your account.
 # CloudFormation Stacks
 
-aws cloudformation create-stack: Creates a new CloudFormation stack.
+1. aws cloudformation create-stack --stack-name STACK_NAME --template-body file://template.json --parameters ParameterKey=Key,ParameterValue=Value --capabilities CAPABILITY_IAM
 
-aws cloudformation update-stack: Updates an existing CloudFormation stack.
+2. aws cloudformation update-stack --stack-name STACK_NAME --template-body file://template.json --parameters ParameterKey=Key,ParameterValue=Value --capabilities CAPABILITY_IAM
 
-aws cloudformation describe-stacks: Lists information about all CloudFormation stacks in your account.
+3. aws cloudformation describe-stacks: Lists information about all CloudFormation stacks in your account.
 
-aws cloudformation delete-stack: Deletes a CloudFormation stack.
+4. aws cloudformation delete-stack --stack-name STACK_NAME
+
+5. aws cloudformation delete-stack-drift-detection-status --stack-drift-detection-id DETECTION_ID
+
+6. aws cloudformation describe-stack-drift-detection-status --stack-drift-detection-id DETECTION_ID
+
+7. aws cloudformation detect-stack-drift --stack-name STACK_NAME
+
+8. aws cloudformation list-stack-resources --stack-name STACK_NAME
+
+9. aws cloudformation get-template --stack-name STACK_NAME
+
+10. aws cloudformation validate-template --template-body file://template.json
+
+11. aws cloudformation describe-stack-resources --stack-name STACK_NAME
+
+12. aws cloudformation list-stacks
+
+13. 
 
 # Elastic Beanstalk
 
