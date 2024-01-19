@@ -92,7 +92,28 @@ aws lambda list-functions: Lists all Lambda functions in your account.
 
 12. aws cloudformation list-stacks
 
-13. 
+# EKS
+
+1. aws eks create-cluster --name <cluster-name> --role-arn <eks-service-role-arn> --resources-vpc-config subnetIds=<subnet-ids>,securityGroupIds=<security-group-id>
+
+2. aws eks --region <region> update-kubeconfig --name <cluster-name>
+
+3. aws eks --region <region> describe-cluster --name <cluster-name>
+
+4. aws eks list-clusters --region <region>
+
+5. aws eks delete-cluster --region <region> --name <cluster-name>
+
+6. aws eks --region <region> list-nodegroups --cluster-name <cluster-name>
+
+7. aws eks --region <region> tag-resource --resource-arn arn:aws:eks:<region>:<account-id>:cluster/<cluster-name> --tags Key=<key>,Value=<value>
+
+8. aws eks --region <region> update-nodegroup-config --cluster-name <cluster-name> --nodegroup-name <nodegroup-name> --scaling-config minSize=<min-size>,maxSize=<max-size>,desiredSize=<desired-size>
+
+9. aws eks --region <region> update-cluster-version --name <cluster-name> --kubernetes-version <new-version>
+
+10. aws eks --region <region> list-add-ons --cluster-name <cluster-name>
+
 
 # Elastic Beanstalk
 
